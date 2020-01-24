@@ -1,0 +1,13 @@
+<div class="container-fluid">
+  <div class="col-12">
+    <ngb-carousel>
+      <ng-template ngbSlide *ngFor="let asset of this.assets">
+        <img src="{{asset.url}}" alt="carousel-img">
+        <div class="carousel-caption" *ngIf="asset.captionHeading || asset.captionText">
+          <h3 *ngIf="asset.captionHeading">{{asset.captionHeading}}</h3>
+          <p *ngIf="asset.captionText">{{asset.captionText}}</p>
+        </div>
+      </ng-template>
+    </ngb-carousel>
+  </div>
+</div>

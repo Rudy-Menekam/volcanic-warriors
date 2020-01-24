@@ -1,0 +1,9 @@
+<div  id="gallery-container" *ngIf="this.data">
+  <div class="container">
+    <h2>Our Gallery</h2>
+    <p *ngIf="this.data.captionText">{{this.data.captionText}}</p>
+    <section class="gallery" *ngIf="this.data.assetUrls != null && this.data.assetUrls.length > 0">
+      <img [src]="asset" *ngFor="let asset of this.data.assetUrls" alt="gallery-image" class="gallery-image"/>
+    </section>
+  </div>
+</div>

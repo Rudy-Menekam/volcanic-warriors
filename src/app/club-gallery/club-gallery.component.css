@@ -1,0 +1,23 @@
+#gallery-container {
+  background-image: url('/assets/home/gallery/0.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 25px 0;
+  text-align: center;
+  color: #eee;
+}
+
+#gallery-container > .container > h2 {
+  text-transform: uppercase;
+  font-family: "Agency FB", Impact, "Roboto Condensed", sans-serif;
+  letter-spacing: 5px;
+}
+
+#gallery-container > .container > p {
+  margin: 20px 0;
+}
+
+.gallery{
+
+}

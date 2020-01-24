@@ -1,0 +1,18 @@
+<div class="container">
+  <section class="text-center">
+    <h2>Testimonials</h2>
+    <p *ngIf="this.data.mainCaptionText != null && this.data.mainCaptionText !== ''">{{this.data.mainCaptionText}}</p>
+    <div class="testimonials" *ngIf="this.data.testimonials != null && this.data.testimonials.length > 0">
+      <div class="testimonial shadow" *ngFor="let testimonial of this.data.testimonials">
+        <img class="testifier-img shadow" [src]="testimonial.testifierAssetUrl" [alt]="testimonial.testifierName"
+             *ngIf="testimonial.testifierAssetUrl != null && testimonial.testifierAssetUrl !== ''"/>
+        <div>
+          <h4 class="d-block font-weight-bold"
+                *ngIf="testimonial.testifierName != null && testimonial.testifierName !== ''">{{testimonial.testifierName}}</h4>
+          <p
+            *ngIf="testimonial.testimonialText != null && testimonial.testimonialText !== ''">{{testimonial.testimonialText}}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

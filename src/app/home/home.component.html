@@ -1,0 +1,8 @@
+<div class="w-100 text-center">
+  <app-carousel [assets]="this.carouselAssets"></app-carousel>
+</div>
+<app-about-sports [data]="this.aboutSportsData" *ngIf="this.aboutSportsData != null"></app-about-sports>
+<app-trophies [data]="this.trophiesData" *ngIf="this.trophiesData != null"></app-trophies>
+<app-club-gallery [data]="this.galleryData" *ngIf="this.galleryData != null"></app-club-gallery>
+<app-latest-news [data]="this.latestNewsData" *ngIf="this.latestNewsData != null"></app-latest-news>
+<app-testimonials [data]="this.testimonialsData" *ngIf="this.testimonialsData != null"></app-testimonials>
