@@ -21,7 +21,13 @@
   width: 250px;
   height: 250px;
   border-radius: 30000px;
-  background-image: repeating-linear-gradient(100deg, black, transparent);
+  background: repeating-linear-gradient(
+    -55deg,
+    #222,
+    #222 10px,
+    #333 10px,
+    #333 20px
+  );
 }
 
 .testimonial::before {
