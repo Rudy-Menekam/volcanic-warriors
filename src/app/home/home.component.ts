@@ -12,12 +12,12 @@ export class HomeComponent implements OnInit {
       {
         captionText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus.',
         captionHeading: 'First Slide',
-        url: '/assets/carousel-1.jpg'
+        url: '/assets/carousel-desktop-1.jpg'
       },
       {
         captionText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus.',
         captionHeading: 'Second Slide',
-        url: '/assets/carousel-2.jpg'
+        url: '/assets/carousel-desktop-2.jpg'
       },
       {
         captionText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus.',
@@ -49,13 +49,22 @@ export class HomeComponent implements OnInit {
     captionText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus.',
     assetUrls: [
       '/assets/home/gallery/1.jpg',
-      '/assets/home/gallery/2.jpg',
       '/assets/home/gallery/3.jpg',
       '/assets/home/gallery/4.jpg',
       '/assets/home/gallery/5.jpg',
       '/assets/home/gallery/6.jpg',
-      '/assets/home/gallery/7.jpg',
-      '/assets/home/gallery/8.jpg'
+      '/assets/home/gallery/8.jpg',
+      '/assets/home/gallery/9.jpg',
+      '/assets/home/gallery/10.jpg',
+      '/assets/home/gallery/11.jpg',
+      '/assets/home/gallery/12.jpg',
+      '/assets/home/gallery/13.jpg',
+      '/assets/home/gallery/14.jpg',
+      '/assets/home/gallery/15.jpg',
+      '/assets/home/gallery/16.jpg',
+      '/assets/home/gallery/17.jpg',
+      '/assets/home/gallery/18.jpg',
+      '/assets/home/gallery/19.jpg'
     ]
   };
 
