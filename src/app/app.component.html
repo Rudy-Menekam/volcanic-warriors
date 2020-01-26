@@ -1,20 +1,20 @@
-<nav class="navbar navbar-expand-lg navbar-dark text-dark bg-transparent">
-  <div class="container">
+<nav class="navbar navbar-expand-lg text-dark p-2" style="background-color: rgba(255,255,255,0.72);" [class.navbar-dark]="this.navbarDark" [class.navbar-light]="!this.navbarDark">
+  <div class="container-fluid">
     <a class="navbar-brand" routerLink=""><img src="/assets/brand-logo-1030x1030.png"/></a>
-    <button (click)="this.toggleNavBar()" class="navbar-toggler d-lg-none" type="button" data-toggle="collapse"
+    <button  class="navbar-toggler d-lg-none" type="button" data-toggle="collapse"
             data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
             aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
     <div class="collapse navbar-collapse" id="collapsibleNavId">
       <div class="mr-auto"></div>
       <ul class="navbar-nav mt-2 mt-lg-0">
-        <li class="nav-item"><a routerLinkActive="active" routerLink="" href="#" class="nav-link">Home</a></li>
-        <li class="nav-item"><a routerLinkActive="active" routerLink="/news" href="#" class="nav-link">News</a></li>
+        <li class="nav-item" ><a routerLinkActive="active" routerLink="" class="nav-link">Home</a></li>
+        <li class="nav-item" ><a  routerLinkActive="active" routerLink="/news" class="nav-link">News</a></li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true"
+          <a class="nav-link dropdown-toggle" id="dropdownId" data-toggle="dropdown" aria-haspopup="true"
              aria-expanded="false">Programs</a>
           <div class="dropdown-menu" aria-labelledby="dropdownId">
-            <a class="dropdown-item" href="#">Program 1</a>
-            <a class="dropdown-item" href="#">Program 2</a>
+            <a class="dropdown-item" >Program 1</a>
+            <a class="dropdown-item" >Program 2</a>
           </div>
         </li>
         <li class="nav-item"><a routerLinkActive="active" routerLink="/about" class="nav-link">About</a></li>
@@ -48,17 +48,26 @@
       </div>
       <div class="col-md-3">
         <h5 class="text-white-50">Contacts</h5>
-        <ul class="nav text-center">
-          <li class="nav-item pr-3">
-            <a href="https://facebook.com"><b class="fa fa-facebook fa-2x"></b></a>
-          </li>
-          <li class="nav-item px-3">
-            <a href="https://facebook.com"><b class="fa fa-instagram fa-2x"></b></a>
-          </li>
-          <li class="nav-item px-3">
-            <a href="https://facebook.com"><b class="fa fa-whatsapp fa-2x"></b></a>
-          </li>
-        </ul>
+        <div class="card bg-warning">
+          <div class="card-header">
+            <h5 class="card-title">Subscribe to our Newsletter</h5>
+          </div>
+          <div class="card-body">
+            <div class="d-flex justify-content-around align-items-center">
+              <a class="btn btn-outline-primary" href="https://web.facebook.com/groups/230999323607740/"><b class="fa fa-facebook"></b></a>
+              <a class="btn btn-outline-success" href="https://facebook.com"><b class="fa fa-whatsapp"></b></a>
+              <a class="btn btn-outline-primary" href="https://facebook.com"><b class="fa fa-twitter"></b></a>
+              <a class="btn btn-outline-danger" href="https://facebook.com"><b class="fa fa-instagram"></b></a>
+            </div>
+            <label for="emailInput"></label>
+            <input id="emailInput" type="text" placeholder="Email address here..." class="form-control my-2"
+                   #emailInput>
+            <div class="input-group-append">
+              <button type="button" class="btn btn-secondary d-block text-center">Subscribe
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

@@ -62,3 +62,13 @@ section > h2 {
   text-transform: uppercase;
   letter-spacing: 6px;
 }
+
+@media screen and (max-width: 768px){
+  .testimonials{
+    flex-direction: column;
+  }
+
+  .testimonials .testimonial + .testimonial{
+    margin-top: 8%;
+  }
+}

@@ -1,0 +1,44 @@
+<div id="news-container">
+  <div class="holder">
+    <div class="d-flex justify-content-between align-items-center">
+      <h1 class="text-muted">News</h1>
+      <small class="text-muted">Last updated: 2 hours ago</small>
+    </div>
+    <hr/>
+    <div class="d-block alert alert-info text-center" *ngIf="this.newsData == null || this.newsData.length <= 0"><b
+      class="fa fa-info-circle"></b> No information available now
+    </div>
+    <div class="row">
+      <div class="col-md-3">
+        <div class="news" detect-scroll (onScroll)="this.reachingBottom($event)"
+             *ngIf="this.newsData != null && this.newsData.length > 0">
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="pagination"></div>
+          </div>
+          <ul class="list-group">
+            <li class="list-group-item bg-warning">
+              <h4>Headlines</h4>
+            </li>
+            <li (click)="selectedNewsItem.news = news" *ngFor="let news of this.newsData;"
+                class="list-group-item list-group-item-action bg-striped"
+                [class.d-none]="!news || news.headLineMainText === ''">
+              <div *ngIf="news">
+                <span>{{news.headLineMainText}}</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <div class="row">
+          <div class="col-md-6">
+            <app-news-item #selectedNewsItem></app-news-item>
+          </div>
+          <div class="col-md-6">
+            gallery
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

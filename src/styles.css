@@ -1,3 +1,9 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body{
   font-family: "Titillium Web",  "Roboto Condensed", Roboto, sans-serif;
 }
@@ -6,15 +12,19 @@ html{
   scroll-behavior: smooth;
 }
 
-body::-webkit-scrollbar {
+*::-webkit-scrollbar {
   width: 1em;
 }
 
-body::-webkit-scrollbar-track {
+*::-webkit-scrollbar-track {
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }
 
-body::-webkit-scrollbar-thumb {
+*::-webkit-scrollbar-thumb {
   background-color: darkgrey;
   outline: 1px solid slategrey;
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-family: "Agency FB", Impact, "Roboto Condensed", sans-serif;
 }

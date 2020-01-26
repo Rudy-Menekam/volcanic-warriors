@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -9,12 +10,15 @@ export class AppComponent {
   title = 'volcanic-warriors';
   private navbarToggle = false;
   private programsToggle = false;
+  private navbarDark = false;
 
-  private toggleNavBar() {
-    this.navbarToggle = !this.navbarToggle;
-  }
-
-  private toggleProgramsToggle() {
-    this.programsToggle = !this.programsToggle;
+  constructor(route: ActivatedRoute) {
+    const component = route.component;
+    console.log(component);
+    if (typeof component === 'string') {
+      this.navbarDark = component as string !== 'AppComponent';
+    } else {
+      this.navbarDark = component === AppComponent;
+    }
   }
 }

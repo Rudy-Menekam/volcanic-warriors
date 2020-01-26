@@ -1,0 +1,51 @@
+.bg-striped {
+  background: repeating-linear-gradient(
+    -55deg,
+    #222,
+    #222 10px,
+    #333 10px,
+    #333 20px
+  );
+  color: #eee;
+}
+
+.list-group-item-action {
+  cursor: pointer;
+  transition: .5s background-image ease;
+}
+
+.list-group-item-action:hover {
+  background: repeating-linear-gradient(
+    -55deg,
+    #5d5d5d,
+    #646464 10px,
+    #757575 10px,
+    #777777 20px
+  );
+}
+
+.list-group-item-action:active {
+  background: repeating-linear-gradient(
+    -55deg,
+    #222,
+    #222 10px,
+    #333 10px,
+    #333 20px
+  );
+}
+
+#news-container::before{
+  background: url('/assets/home/backgrounds/desktop-3.jpg') fixed;
+  top: 0;
+  content: '';
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+}
+
+#news-container > .holder{
+  padding: 13px;
+  background-color: rgba(255, 255, 255, 0.86);
+}

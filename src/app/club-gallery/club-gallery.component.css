@@ -20,13 +20,13 @@
   content: '';
 }
 
-#gallery-container > .container > h2 {
+#gallery-container > .holder > h2 {
   text-transform: uppercase;
   font-family: "Agency FB", Impact, "Roboto Condensed", sans-serif;
   letter-spacing: 5px;
 }
 
-#gallery-container > .container > p {
+#gallery-container > .holder > p {
   margin: 20px 0;
 }
 
@@ -35,9 +35,17 @@
   grid-template-columns: repeat(auto-fill, minmax(300px, 2fr));
   grid-gap: 30px;
   text-align: center;
+  align-items: center;
 }
 
 .gallery .gallery-image {
   width: 300px;
   margin: 0 60px;
+  overflow: hidden;
+  border: yellow solid 2px;
+  transition: transform .2s ease;
+}
+
+.gallery .gallery-image:hover{
+  transform: scale(1.5);
 }
